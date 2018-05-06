@@ -1,0 +1,32 @@
+[
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/city_1.jpg",
+    "description":"中华人民共和国直辖市，国家中心城市，超大城市，沪杭甬大湾区核心城市，国际经济、金融、贸易、航运、科技创新中心。隔东中国海与日本九州岛相望，南濒杭州湾",
+    "title":"上海"
+  },
+  {
+    "dataType":"Image",
+    "imageUrl":"file:///android_asset/city_2.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/city_3.jpg",
+    "description":"是中华人民共和国的首都、直辖市、国家中心城市、超大城市、国际大都市，全国政治中心、文化中心、国际交往中心、科技创新中心。",
+    "title":"北京"
+  },
+  {
+      "dataType":"Image",
+      "imageUrl":"file:///android_asset/city_4.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/city_5.jpg",
+    "title":"深圳",
+    "description":"别称“鹏城”，是中国四大一线城市之一，广东省省辖市、计划单列市、副省级市、国家区域中心城市、超大城市，国务院定位的全国经济中心城市和国际化城市"
+  },
+  {
+    "dataType":"Image",
+    "imageUrl":"file:///android_asset/city_6.jpg"
+  }
+]

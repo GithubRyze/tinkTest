@@ -1,0 +1,32 @@
+[
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/eat_1.jpg",
+    "description":"美食，顾名思义就是美味的食物，贵的有山珍海味，便宜的有街边小吃。其实美食是不分贵贱的，只要是自己喜欢的，都可以称之为美食",
+    "title":"美食"
+  },
+  {
+    "dataType":"Image",
+    "imageUrl":"file:///android_asset/eat_2.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/eat_3.jpg",
+    "description":"美食，顾名思义就是美味的食物，贵的有山珍海味，便宜的有街边小吃。其实美食是不分贵贱的，只要是自己喜欢的，都可以称之为美食",
+    "title":"美食"
+  },
+  {
+      "dataType":"Image",
+      "imageUrl":"file:///android_asset/eat_4.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/eat_5.jpg",
+    "description":"美食，顾名思义就是美味的食物，贵的有山珍海味，便宜的有街边小吃。其实美食是不分贵贱的，只要是自己喜欢的，都可以称之为美食",
+    "title":"美食 "
+  },
+  {
+        "dataType":"Image",
+        "imageUrl":"file:///android_asset/eat_6.jpg"
+   }
+]

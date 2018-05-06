@@ -1,0 +1,32 @@
+[
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/hongkong_1.jpg",
+    "description":"购物天堂是对香港的雅称。香港素来被中外游客称作“购物天堂”，香港店铺售卖着世界各地不同特色的货品，由国际顶级品牌至地方特色小商品。",
+    "title":"购物天堂"
+  },
+  {
+    "dataType":"Image",
+    "imageUrl":"file:///android_asset/hongkong_2.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/shenzhen_1.jpg",
+    "description":"购物天堂是对香港的雅称。香港素来被中外游客称作“购物天堂”，香港店铺售卖着世界各地不同特色的货品，由国际顶级品牌至地方特色小商品。",
+    "title":"购物天堂"
+  },
+  {
+      "dataType":"Image",
+      "imageUrl":"file:///android_asset/shenzhen_2.jpg"
+  },
+  {
+    "dataType":"ImageDescription",
+    "imageUrl":"file:///android_asset/shanghai_1.jpeg",
+    "description":"购物天堂是对香港的雅称。香港素来被中外游客称作“购物天堂”，香港店铺售卖着世界各地不同特色的货品，由国际顶级品牌至地方特色小商品。",
+    "title":"购物天堂"
+  },
+  {
+    "dataType":"Image",
+    "imageUrl":"file:///android_asset/shanghai_2.jpg"
+  }
+]
