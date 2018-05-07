@@ -1,10 +1,8 @@
 package com.example.tinklabs.tinklabsdemo.http;
 
 import android.support.annotation.NonNull;
-import android.util.SparseArray;
 
 import com.example.tinklabs.tinklabsdemo.bean.ImageBean;
-import com.example.tinklabs.tinklabsdemo.utils.Constant;
 import com.example.tinklabs.tinklabsdemo.utils.DataType;
 
 import java.util.ArrayList;
@@ -22,7 +20,7 @@ public class DataManager {
     /**
      * save data into ConcurrentHashMap
      */
-    void addData(DataType dataType, @NonNull List<ImageBean> items) {
+    public void addData(@NonNull DataType dataType, @NonNull List<ImageBean> items) {
 
             List<ImageBean> data = concurrentHashMap.get(dataType);
             if (data == null){

@@ -25,7 +25,20 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:27.1.1'
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'com.android.support:design:27.1.1'
+    compile 'com.google.dagger:dagger:2.7'
+
     testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.18.3"
     androidTestCompile 'com.android.support.test:runner:1.0.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestCompile 'com.android.support.test:rules:1.0.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    androidTestCompile ('com.android.support.test.espresso:espresso-core:3.0.2'){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
 }

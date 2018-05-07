@@ -1,9 +1,9 @@
 package com.example.tinklabs.tinklabsdemo.http;
 
 
-
 import android.content.Context;
 import android.os.AsyncTask;
+
 import com.example.tinklabs.tinklabsdemo.bean.ImageBean;
 import com.example.tinklabs.tinklabsdemo.bean.ImageDescriptionBean;
 import com.example.tinklabs.tinklabsdemo.utils.AssetsReadUtil;
@@ -13,6 +13,7 @@ import com.example.tinklabs.tinklabsdemo.utils.LogUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -55,8 +56,6 @@ public class LoadingTask extends AsyncTask<String, Void, List<ImageBean>> {
             list = parseData(data);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
         return list;
 
@@ -95,26 +94,30 @@ public class LoadingTask extends AsyncTask<String, Void, List<ImageBean>> {
      * @throws JSONException
      * parse json data
      */
-    public List<ImageBean> parseData(String data) throws IOException, JSONException {
+    public List<ImageBean> parseData(String data){
+
         List<ImageBean> rtn = new ArrayList<>();
-        final JSONArray jsonArray = new JSONArray(data);
-        for (int i = 0; i < jsonArray.length(); ++i) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            final String type = jsonObject.getString(Constant.KEY_TYPE);
-            if (Constant.KEY_IMAGE_TYPE.equals(type)) {
-                rtn.add(new ImageBean(jsonObject.getString(Constant.KEY_IMAGE_URL)));
-            } else if (Constant.KEY_IMAGE_DESCRIPTION_TYPE.equals(type)) {
-                rtn.add(new ImageDescriptionBean(jsonObject.getString(Constant.KEY_IMAGE_URL),
-                        jsonObject.getString(Constant.KEY_IMAGE_TITLE), jsonObject.getString(Constant.KEY_IMAGE_DESCRIPTION)));
-            } else {
-                throw new UnsupportedOperationException();
+        try {
+            if (data == null) {
+                return rtn;
             }
+            final JSONArray jsonArray = new JSONArray(data);
+            for (int i = 0; i < jsonArray.length(); ++i) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                final String type = jsonObject.getString(Constant.KEY_TYPE);
+                if (Constant.KEY_IMAGE_TYPE.equals(type)) {
+                    rtn.add(new ImageBean(jsonObject.getString(Constant.KEY_IMAGE_URL)));
+                } else if (Constant.KEY_IMAGE_DESCRIPTION_TYPE.equals(type)) {
+                    rtn.add(new ImageDescriptionBean(jsonObject.getString(Constant.KEY_IMAGE_URL),
+                            jsonObject.getString(Constant.KEY_IMAGE_TITLE), jsonObject.getString(Constant.KEY_IMAGE_DESCRIPTION)));
+                } else {
+                    throw new UnsupportedOperationException();
+                }
+            }
+        }catch (JSONException e){
+            LogUtils.d(TAG, e.getMessage());
+            return rtn;
         }
-
-        // shuffle list for fun
-        //Collections.shuffle(rtn);
-
-        // Because data is loaded in local, simulating a tiny delay for performing UI
         return rtn;
     }
 
