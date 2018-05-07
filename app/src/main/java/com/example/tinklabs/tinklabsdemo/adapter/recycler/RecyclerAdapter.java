@@ -79,7 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final Context context = mContext.get();
         if (context == null) return;
-        final ImageBean imageBean = imageBeanList.get(position);;
+        final ImageBean imageBean = imageBeanList.get(position);
         final int viewType = getItemViewType(position);
         if (IMAGE_TYPE == viewType) {
             final ImageViewHolder viewHolder = (ImageViewHolder) holder;

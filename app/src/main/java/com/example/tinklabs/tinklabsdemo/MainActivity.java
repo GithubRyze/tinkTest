@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         MainViewPageAdapter adapter = new MainViewPageAdapter(getSupportFragmentManager(), MainActivity.this);
 
         viewPager.setAdapter(adapter);
 
-        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+        mTabLayout = findViewById(R.id.tabs);
         mTabLayout.setupWithViewPager(viewPager);
         if (savedInstanceState != null) {
             TabLayout.Tab selectedTab = mTabLayout.getTabAt(savedInstanceState.getInt(TAB_SELECTED, 0));

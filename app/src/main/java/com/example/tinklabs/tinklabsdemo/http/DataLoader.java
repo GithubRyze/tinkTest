@@ -3,7 +3,6 @@ package com.example.tinklabs.tinklabsdemo.http;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import com.example.tinklabs.tinklabsdemo.app.TinkLabsApplication;
 import com.example.tinklabs.tinklabsdemo.bean.ImageBean;
 import com.example.tinklabs.tinklabsdemo.utils.Constant;
